@@ -18,6 +18,8 @@ function App() {
   const handleball = (value)=>{
     setballcount(ballcount+value);
   }
+
+  
   return (
     <div className="App">
       <h3>India:</h3>
@@ -85,7 +87,7 @@ function App() {
       </div>
 
       {/* If score reaches greater than 100, show text "India Won" without quotes in h1 tag with class name 'status' */}
-      <h1 className='status'>{}</h1>
+      <h1 className='status'>{scorecount>=100 ? "India Won" : ""}</h1>
     </div>
   );
 }
