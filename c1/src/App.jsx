@@ -8,16 +8,42 @@ function App() {
   const [ballcount, setballcount] = useState(50);
 
   const handlescore = (value)=>{
-    setscorecount(scorecount+value);
+    if(scorecount<100){
+      setscorecount(scorecount+value);
+
+    }
+    
   }
 
   const handlewicket = (value)=>{
-    setwicketcount(wicketcount+value);
+    if(scorecount<100){
+      if(wicketcount<12){
+        setwicketcount(wicketcount+value);
+      }else{
+        setwicketcount(wicketcount)
+      }
+    }
   }
 
   const handleball = (value)=>{
-    setballcount(ballcount+value);
+    if(scorecount<100){
+      setballcount(ballcount+value);
+
+    }
+    
   }
+
+  const balltoover = (ball)=>{
+    if(ball%6===0){
+      let over = ball/6
+      return over
+    }
+    else{
+
+      return Math.floor(ball/6)+ball%6/10
+    }
+  }
+  console.log(balltoover(47));
 
   
   return (
