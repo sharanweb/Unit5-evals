@@ -33,18 +33,6 @@ function App() {
     
   }
 
-  const balltoover = (ball)=>{
-    if(ball%6===0){
-      let over = ball/6
-      return over
-    }
-    else{
-
-      return Math.floor(ball/6)+ball%6/10
-    }
-  }
-  console.log(balltoover(47));
-
   
   return (
     <div className="App">
@@ -73,7 +61,7 @@ function App() {
           Over:{" "}
           <h1 className="overCount">
             {
-              ballcount
+              Math.floor(ballcount/6)+ballcount%6/10
               // Show Over here in the format: "over.ball" eg: 4.5 means 4th over and 5th ball
               // if 1 more ball is thrown then over is now 5.0
               // you have to write logic to form this string from current ball number.
