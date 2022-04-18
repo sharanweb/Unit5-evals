@@ -88,58 +88,6 @@
       "twelth_score": 74,
       "preferred_branch": "commerce"
     },
-    {
-      "first_name": "",
-      "last_name": "",
-      "email": "",
-      "gender": "male",
-      "tenth_score": "",
-      "twelth_score": "",
-      "preferred_branch": "",
-      "": "52",
-      "id": 9
-    },
-    {
-      "first_name": "",
-      "last_name": "",
-      "email": "",
-      "gender": "female",
-      "tenth_score": "",
-      "twelth_score": "",
-      "preferred_branch": "",
-      "": "commerce",
-      "id": 10
-    },
-    {
-      "first_name": "shiva",
-      "last_name": "dsa",
-      "email": "dsa@gmail.com",
-      "gender": "male",
-      "age": "23",
-      "tenth_score": "56",
-      "twelth_score": "78",
-      "preferred_branch": "whichever",
-      "id": 11
-    },
-    {
-      "first_name": "shivan",
-      "last_name": "pawar",
-      "email": "shivam@gmail.com",
-      "gender": "male",
-      "age": "12",
-      "tenth_score": "45",
-      "twelth_score": "54",
-      "id": 12
-    },
-    {
-      "first_name": "shivan",
-      "last_name": "pawar",
-      "email": "shivam@gmail.com",
-      "gender": "male",
-      "age": "12",
-      "tenth_score": "45",
-      "twelth_score": "54",
-      "id": 13
-    }
+    
   ]
 }
