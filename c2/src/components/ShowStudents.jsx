@@ -44,7 +44,7 @@ export const ShowStudents = () => {
     
   };
 
-  console.log("alldata>>>>", allData);
+  // console.log("alldata>>>>", allData);
 
   return loading ? (
     <div>loading....</div>
