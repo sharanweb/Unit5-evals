@@ -22,7 +22,7 @@ export const AddStudent = () => {
     formData.age > 50 ||
     formData.tenth_score > 100 ||
     formData.twelth_score > 100
-      ? alert("Error...! Invalid Value...!")
+      ? alert("Error! Invalid Value somethimg missing!")
       : fetch("http://localhost:8080/students", {
           method: "POST",
           headers: {

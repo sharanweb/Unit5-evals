@@ -22,13 +22,13 @@ export const ShowStudents = () => {
 
     setLoading(false);
 
-      console.log("fetches the data ");
+      // console.log("fetches the data ");
 
   };
 
   const handleSort = async() => {
-    console.log("sortKey:", sortKey);
-    console.log("sortOrder:", sortOrder);
+    // console.log("sortKey:", sortKey);
+    // console.log("sortOrder:", sortOrder);
 
     sortOrder === "asc"
       ? setAllData(
