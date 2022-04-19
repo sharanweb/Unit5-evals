@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <button className="togglebtn" onClick={() => {
         setShow(!show)
-      }}>{ show?"Add Student":"Table"}</button>
+      }}>{ show?"Add A new Student":"Go to Table"}</button>
 
       {show?<ShowStudents/>:<AddStudent/>}
       {/* Show either  AddStudent component or ShowStudents dependeing on the above button click  */}
