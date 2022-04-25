@@ -1,10 +1,11 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../Context/authContext";
+import { useNavigate } from "react-router-dom";
 
 
 export const Login = () => {
   const [user, setUser] = useState({username:"", password:""});
-    const {toggleAuth, isLogin, setIsLogin} = useContext(AuthContext);
+    const {handleAuth, isLogin, setIsLogin} = useContext(AuthContext);
     const [token, setToken] = useState("");
 
     const handleChange = (e)=>{
@@ -12,27 +13,30 @@ export const Login = () => {
         setUser({...user, [name]:value});
     }
 
-    const handleSubmit = (e)=>{
-        e.preventDefault();
-        fetch(`https://reqres.in/api/login`, {
-            method: 'POST',
-            body: JSON.stringify(user),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-            .then((res) => res.json())
-            .then((res) => {
-                if (res.token) {
-                    setIsLogin(true);
-                    setToken(res.token);
-                    console.log(token)
-                    toggleAuth(true);
-                    alert("login Successful")
+    // const handleSubmit = (e)=>{
+    //     e.preventDefault();
+    //     fetch(`https://reqres.in/api/login`, {
+    //         method: 'POST',
+    //         body: JSON.stringify(user),
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         }
+    //     })
+    //         .then((res) => res.json())
+    //         .then((res) => {
+    //             if (res.token) {
+    //                 setIsLogin(true);
+    //                 setToken(res.token);
+    //                 console.log(token)
+    //                 toggleAuth(true);
+    //                 alert("login Successful")
                     
 
-                } 
-            })
+    //             } 
+    //         })
+    // }
+    const handleSubmit = (e)=>{
+
     }
    
 
