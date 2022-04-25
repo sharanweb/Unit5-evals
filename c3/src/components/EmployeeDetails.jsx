@@ -14,7 +14,7 @@ export const EmployeeDetails = () => {
 
 
   useEffect(() => {
-    //https://reqres.in/api/users
+    
     axios.get(`http://localhost:8080/employee/${id}`).then(({ data }) => {
       setUser(data);
     })
@@ -37,9 +37,10 @@ export const EmployeeDetails = () => {
       Status: <b className="status">{user.status}</b>
       Title: <b className="title">{user.title}</b>
       {/* Show this button only if user is not already terminated (users status is working) */}
-      <button className="fire">Fire Employee</button>
-      {/* Show this button only if user is not already team lead or terminated */}
-      <button className="promote">promote</button>
+      {user.status === "terminated" ? null : <button className="fire">Fire Employee</button>}
+      
+      {user.title !== "Team Lead"&& user.status !=="terminated" ? <button className="promote">promote</button> : null}
+      
     </div>
   );
 };
