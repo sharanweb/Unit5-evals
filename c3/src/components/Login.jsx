@@ -3,7 +3,7 @@ import { AuthContext } from "../Context/authContext";
 
 
 export const Login = () => {
-  const [user, setUser] = useState({email:"", password:""});
+  const [user, setUser] = useState({username:"", password:""});
     const {toggleAuth, isLogin, setIsLogin} = useContext(AuthContext);
     const [token, setToken] = useState("");
 
@@ -26,7 +26,8 @@ export const Login = () => {
                 if (res.token) {
                     setIsLogin(true);
                     setToken(res.token);
-                    toggleAuth();
+                    console.log(token)
+                    toggleAuth(true);
                     alert("login Successful")
                     
 
